@@ -1,0 +1,12 @@
+<!-- Placeholder CEO Image -->
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="20" fill="#4BA3D4"/>
+  <circle cx="64" cy="50" r="20" fill="#ffffff"/>
+  <path d="M64 35 C58 35 58 45 C58 45 64 50 C70 50 82 45 C82 45 94 50 C94 55 C94 65 C82 65 C70 65 C58 65 C58 50" stroke="#4BA3D4" stroke-width="2" fill="none"/>
+  <circle cx="64" cy="42" r="3" fill="#4BA3D4"/>
+  <circle cx="58" cy="42" r="3" fill="#4BA3D4"/>
+  <circle cx="70" cy="42" r="3" fill="#4BA3D4"/>
+  <circle cx="76" cy="42" r="3" fill="#4BA3D4"/>
+  <path d="M50 70 C50 75 C52 80 C54 80 C56 75" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="64" y="95" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">CEO</text>
+</svg>
