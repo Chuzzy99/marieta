@@ -74,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} overflow-x-hidden`}>
       <head>
         <script
           type="application/ld+json"
@@ -112,7 +112,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased min-h-screen flex flex-col bg-white text-slate-900">
+      <body className="antialiased min-h-screen flex flex-col bg-white text-slate-900 overflow-x-hidden">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md shadow-lg outline-none ring-2 ring-primary ring-offset-2">
           Skip to content
         </a>
