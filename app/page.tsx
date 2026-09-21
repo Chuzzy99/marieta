@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/pages/home/HeroSection";
 import ServicesGrid from "@/components/pages/home/ServicesGrid";
-import TestimonialsPreview from "@/components/pages/home/TestimonialsPreview";
 import HowItWorksPreview from "@/components/pages/home/HowItWorksPreview";
 import TrustBadges from "@/components/shared/TrustBadges";
 import CTABanner from "@/components/shared/CTABanner";
@@ -33,7 +32,6 @@ export default function Home() {
       <HeroSection />
       <TrustBadges />
       <ServicesGrid />
-      <TestimonialsPreview />
       <HowItWorksPreview />
       <NewsletterSection />
       <CTABanner />
