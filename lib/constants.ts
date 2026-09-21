@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   url: "https://marietaeyeclinic.com",
   description: "Marieta Eye Clinic offers comprehensive eye examinations, children's vision screening, glaucoma assessment, and quality optical services.",
   telephone: "+234 803 306 7153",
-  email: "marietaeyeclinic@gmail.com",
+  email: "ijeamakamariagoretti@gmail.com",
   address: {
     street: "378 Abeokuta Exp Road, Abule Egba",
     city: "Lagos",

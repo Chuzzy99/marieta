@@ -46,10 +46,10 @@ export default function VisitUs() {
                 <div>
                   <p className="font-semibold">Email</p>
                   <a
-                    href="mailto:marietaeyeclinic@gmail.com"
+                    href="mailto:ijeamakamariagoretti@gmail.com"
                     className="text-white/80 text-sm hover:text-white transition-colors"
                   >
-                    marietaeyeclinic@gmail.com
+                    ijeamakamariagoretti@gmail.com
                   </a>
                 </div>
               </div>

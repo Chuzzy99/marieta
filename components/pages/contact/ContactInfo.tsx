@@ -40,7 +40,7 @@ export function ContactInfo() {
               <strong className="text-foreground">WhatsApp:</strong> <a href="https://wa.me/2348033067153" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+234 803 306 7153</a>
             </p>
             <p>
-              <strong className="text-foreground">Email:</strong> <a href="mailto:marietaeyeclinic@gmail.com" className="hover:text-primary transition-colors">marietaeyeclinic@gmail.com</a>
+              <strong className="text-foreground">Email:</strong> <a href="mailto:ijeamakamariagoretti@gmail.com" className="hover:text-primary transition-colors">ijeamakamariagoretti@gmail.com</a>
             </p>
           </div>
         </div>

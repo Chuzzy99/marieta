@@ -90,7 +90,7 @@ export default function RootLayout({
               "description": "Your trusted eye clinic in Lagos",
               "url": "https://marietaeyeclinic.com",
               "telephone": "+2348033067153",
-              "email": "marietaeyeclinic@gmail.com",
+              "email": "ijeamakamariagoretti@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "378 Abeokuta Express Road, Abule Egba",
