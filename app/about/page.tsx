@@ -4,7 +4,6 @@ import { AboutStory } from "@/components/pages/about/AboutStory";
 import { TeamGrid } from "@/components/pages/about/TeamGrid";
 import { ClinicStats } from "@/components/pages/about/ClinicStats";
 import CTABanner from "@/components/shared/CTABanner";
-import TrustBadges from "@/components/shared/TrustBadges";
 
 export const metadata: Metadata = {
   title: "About Us | Marieta Eye Clinic",
@@ -27,7 +26,6 @@ export default function AboutPage() {
       <AboutStory />
       <ClinicStats />
       <TeamGrid />
-      <TrustBadges />
       <CTABanner />
     </div>
   );
