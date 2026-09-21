@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Suspense } from "react";
+import { Lora, Work_Sans } from "next/font/google";
 import "./globals.css";
+import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-// import { ChatbotWidget } from "@/components/shared/ChatbotWidget";
 import { SITE_CONFIG } from "@/lib/constants";
-import AnalyticsProvider from "@/components/analytics/AnalyticsProvider";
-import WebVitals from "@/components/performance/WebVitals";
 
-const inter = Inter({
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const workSans = Work_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -74,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} overflow-x-hidden`}>
+    <html lang="en" className={`${lora.variable} ${workSans.variable} overflow-x-hidden`}>
       <head>
         <script
           type="application/ld+json"
@@ -85,12 +88,12 @@ export default function RootLayout({
               "@type": "MedicalClinic",
               "name": "Marieta Eye Clinic",
               "description": "Your trusted eye clinic in Lagos",
-              "url": "https://yourdomain.com",
-              "telephone": "+234XXXXXXXXXX",
-              "email": "info@yourdomain.com",
+              "url": "https://marietaeyeclinic.com",
+              "telephone": "+2348033067153",
+              "email": "marietaeyeclinic@gmail.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "C/O Pharmacy & Drug Cabinet, Abule-Egba Bus Stop",
+                "streetAddress": "378 Abeokuta Express Road, Abule Egba",
                 "addressLocality": "Lagos",
                 "addressRegion": "Lagos",
                 "addressCountry": "NG"
@@ -101,31 +104,17 @@ export default function RootLayout({
             }`,
           }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID');
-            `,
-          }}
-        />
       </head>
-      <body className="antialiased min-h-screen flex flex-col bg-white text-slate-900 overflow-x-hidden">
+      <body className="antialiased min-h-screen flex flex-col bg-background text-foreground font-sans overflow-x-hidden">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md shadow-lg outline-none ring-2 ring-primary ring-offset-2">
           Skip to content
         </a>
+        <TopBar />
         <Navbar />
-        <main id="main-content" className="flex-1 pt-16">
+        <main id="main-content" className="flex-1">
           {children}
         </main>
         <Footer />
-        {/* <ChatbotWidget /> */}
-        {/* <Suspense fallback={null}>
-          <AnalyticsProvider />
-          <WebVitals />
-        </Suspense> */}
       </body>
     </html>
   );

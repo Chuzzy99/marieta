@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/pages/home/HeroSection";
-import ServicesGrid from "@/components/pages/home/ServicesGrid";
-import HowItWorksPreview from "@/components/pages/home/HowItWorksPreview";
-import CTABanner from "@/components/shared/CTABanner";
-import NewsletterSection from "@/components/shared/NewsletterSection";
+import ServicesShowcase from "@/components/pages/home/ServicesShowcase";
+import VisitPreview from "@/components/pages/home/VisitPreview";
+import VisitUs from "@/components/pages/home/VisitUs";
 
 export const metadata: Metadata = {
-  title: "Expert Eye Care in Lagos | Marieta Eye Clinic",
+  title: "Marieta Eye Clinic | Eye Care in Abule Egba, Lagos",
   description:
-    "Marieta Eye Clinic offers comprehensive eye examinations, children's vision screening, glaucoma assessment, and quality optical services in Lagos. Trusted by thousands. Book your appointment today.",
+    "Marieta Eye Clinic offers comprehensive eye examinations, children's vision screening, glaucoma assessment, and quality optical services on the Abeokuta Expressway, Abule Egba, Lagos.",
   openGraph: {
-    title: "Expert Eye Care in Lagos | Marieta Eye Clinic",
+    title: "Marieta Eye Clinic | Eye Care in Abule Egba, Lagos",
     description:
-      "Comprehensive eye care for every stage of life in Abule-Egba, Lagos. Book your appointment today.",
+      "Your family eye clinic in Abule Egba, Lagos. Walk in or book ahead for comprehensive eye care.",
     url: "https://marietaeyeclinic.com",
     images: [
       {
         url: "https://marietaeyeclinic.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Marieta Eye Clinic - Expert Eye Care",
+        alt: "Marieta Eye Clinic - Eye Care in Abule Egba, Lagos",
       },
     ],
   },
@@ -27,13 +26,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <HeroSection />
-      <ServicesGrid />
-      <HowItWorksPreview />
-      <NewsletterSection />
-      <CTABanner />
-
+      <ServicesShowcase />
+      <VisitPreview />
+      <VisitUs />
     </div>
   );
 }

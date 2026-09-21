@@ -1,65 +1,89 @@
 import Link from "next/link";
-import { Eye, Phone, Mail, MapPin } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const serviceLinks = [
-  { href: "/book-appointment?service=comprehensive-eye-exams", label: "Eye Examinations" },
-  { href: "/book-appointment?service=computer-vision-syndrome", label: "Digital Eye Strain" },
-  { href: "/book-appointment?service=refraction-prescription", label: "Refraction & Glasses" },
-  { href: "/book-appointment?service=glaucoma-management", label: "Glaucoma Care" },
-  { href: "/book-appointment?service=pediatric-eye-care", label: "Pediatric Eye Care" },
-  { href: "/book-appointment?service=contact-lens-fitting", label: "Contact Lenses" },
-  { href: "/book-appointment?service=low-vision-assessment", label: "Low Vision" },
-  { href: "/book-appointment?service=optical-sales", label: "Quality Optical Sales" },
+  { href: "/services/comprehensive-eye-exams", label: "Eye Examinations" },
+  { href: "/services/refraction-prescription", label: "Refraction & Glasses" },
+  { href: "/services/glaucoma-management", label: "Glaucoma Care" },
+  { href: "/services/pediatric-eye-care", label: "Pediatric Eye Care" },
+  { href: "/services/contact-lens-fitting", label: "Contact Lenses" },
+  { href: "/services/optical-sales", label: "Optical Frames & Lenses" },
 ];
 
 const clinicLinks = [
   { href: "/about", label: "About Us" },
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/testimonials", label: "Testimonials" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
+  { href: "/testimonials", label: "Testimonials" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-slate-400" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Clinic Info */}
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl hover:opacity-80 transition-opacity">
-              <Eye className="w-6 h-6 text-[#4BA3D4]" aria-hidden="true" />
-              <span>{SITE_CONFIG.name}</span>
+    <footer className="bg-[#1c1917] text-stone-400" role="contentinfo">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+          {/* Clinic Info — takes more space */}
+          <div className="lg:col-span-5 space-y-5">
+            <Link
+              href="/"
+              className="inline-block text-white font-heading text-xl font-bold hover:opacity-80 transition-opacity"
+            >
+              {SITE_CONFIG.name}
             </Link>
-            <p className="text-sm leading-relaxed">
-              Premium eye care for the whole family. Dedicated to protecting your sight with expert precision.
+            <p className="text-sm leading-relaxed max-w-sm">
+              Your neighbourhood eye clinic on the Abeokuta Expressway. We have been looking after the eyes of Lagos families, workers, and children since our doors first opened.
             </p>
-            <div className="flex gap-3">
-              <a 
-                href={SITE_CONFIG.socials.whatsapp} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="WhatsApp" 
-                className="text-[#25D366] hover:opacity-80 transition-opacity bg-white/10 p-2 rounded-full"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-              </a>
-            </div>
+
+            {/* Contact details prominent */}
+            <ul className="space-y-3 text-sm" role="list">
+              <li>
+                <a
+                  href={SITE_CONFIG.socials.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-[#25D366] font-semibold hover:opacity-80 transition-opacity"
+                >
+                  <Phone className="w-4 h-4 shrink-0" aria-hidden="true" />
+                  +234 803 306 7153 (WhatsApp)
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${SITE_CONFIG.email}`}
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Mail className="w-4 h-4 shrink-0" aria-hidden="true" />
+                  {SITE_CONFIG.email}
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>
+                  378 Abeokuta Express Road,<br />Abule Egba, Lagos
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Clock className="w-4 h-4 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>
+                  Mon–Fri: 8 am – 6 pm<br />
+                  Saturday: 9 am – 4 pm<br />
+                  Sunday: Closed
+                </span>
+              </li>
+            </ul>
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Services</h3>
-            <ul className="space-y-2" role="list">
+          <div className="lg:col-span-3">
+            <h3 className="text-white font-semibold text-sm mb-4">Services</h3>
+            <ul className="space-y-2.5" role="list">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+                    className="text-sm hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -69,14 +93,14 @@ export function Footer() {
           </div>
 
           {/* Clinic Links */}
-          <div>
-            <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Clinic</h3>
-            <ul className="space-y-2" role="list">
+          <div className="lg:col-span-2">
+            <h3 className="text-white font-semibold text-sm mb-4">Clinic</h3>
+            <ul className="space-y-2.5" role="list">
               {clinicLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+                    className="text-sm hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -85,50 +109,36 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Contact</h3>
-            <ul className="space-y-3" role="list">
-              <li>
-                <a href={`tel:${SITE_CONFIG.telephone.replace(/\s/g, '')}`} className="flex items-start gap-2 text-sm hover:text-white transition-colors">
-                  <Phone className="w-4 h-4 mt-0.5 shrink-0 text-secondary" aria-hidden="true" />
-                  {SITE_CONFIG.telephone}
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${SITE_CONFIG.email}`} className="flex items-start gap-2 text-sm hover:text-white transition-colors">
-                  <Mail className="w-4 h-4 mt-0.5 shrink-0 text-secondary" aria-hidden="true" />
-                  {SITE_CONFIG.email}
-                </a>
-              </li>
-              <li className="text-sm">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-secondary" aria-hidden="true" />
-                <span>{SITE_CONFIG.address.street},<br />{SITE_CONFIG.address.city}, {SITE_CONFIG.address.state}</span>
-              </li>
-              <li className="text-sm">
-                <span className="text-white font-medium">Payment:</span><br />
-                {SITE_CONFIG.payment.registration}<br />
-                {SITE_CONFIG.payment.process}
-              </li>
-              <li className="text-sm">
-                <span className="text-white font-medium">Hours:</span><br />
-                {SITE_CONFIG.hours.weekdays}<br />
-                {SITE_CONFIG.hours.saturday}<br />
-                {SITE_CONFIG.hours.sunday}
-              </li>
-            </ul>
+          {/* Quick action */}
+          <div className="lg:col-span-2">
+            <h3 className="text-white font-semibold text-sm mb-4">Visit Us</h3>
+            <div className="space-y-4">
+              <Link
+                href="/book-appointment"
+                className="block bg-primary text-primary-foreground text-center px-4 py-2.5 text-sm font-semibold hover:bg-primary/90 transition-colors"
+              >
+                Book Appointment
+              </Link>
+              <a
+                href={SITE_CONFIG.socials.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[#25D366] text-white text-center px-4 py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
 
-        <Separator className="my-8 bg-white/10" />
-
-        {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
-          <p>&copy; 2026 {SITE_CONFIG.name}. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
-            <Link href="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
+        {/* Divider */}
+        <div className="border-t border-white/10 mt-12 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+            <p>&copy; 2026 {SITE_CONFIG.name}. All rights reserved.</p>
+            <div className="flex gap-4">
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
+            </div>
           </div>
         </div>
       </div>

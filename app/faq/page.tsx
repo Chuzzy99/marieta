@@ -1,16 +1,15 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/PageHero";
 import { FaqList } from "@/components/pages/faq/FaqList";
-import CTABanner from "@/components/shared/CTABanner";
 import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Marieta Eye Clinic",
-  description: "Find answers to common questions about appointments, procedures like LASIK and cataract surgery, and general eye care.",
+  description: "Find answers to common questions about appointments, procedures, and general eye care at Marieta Eye Clinic in Lagos.",
   openGraph: {
     title: "Eye Care FAQ | Marieta Eye Clinic",
     description: "Get answers to your questions about visiting Marieta Eye Clinic.",
-    url: "https://Marietaeye.com/faq",
+    url: "https://marietaeyeclinic.com/faq",
   },
 };
 
@@ -25,7 +24,7 @@ export default function FAQPage() {
         "name": "What are your hours of operation?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We are open Monday through Thursday from 8:00 AM to 5:00 PM, and Friday from 8:00 AM to 1:00 PM. We offer Saturday appointments by special request only. We are closed on Sundays."
+          "text": "We are open Monday through Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 4:00 PM. We are closed on Sundays."
         }
       },
       {
@@ -33,22 +32,14 @@ export default function FAQPage() {
         "name": "Are you accepting new patients?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we are currently accepting new patients for all our providers. You can schedule an appointment online or by calling our office."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you perform LASIK surgery?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we have fellowship-trained refractive surgeons who perform LASIK, PRK, and other vision correction procedures. We offer free consultations to determine if you are a good candidate."
+          "text": "Yes, we are always accepting new patients. You can walk in during our operating hours, or book ahead on WhatsApp."
         }
       }
     ]
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Script
         id="faq-schema"
         type="application/ld+json"
@@ -57,12 +48,10 @@ export default function FAQPage() {
       
       <PageHero 
         headline="Frequently Asked Questions" 
-        subheadline="Find quick answers to common questions about our clinic, services, appointments, and billing."
+        subheadline="Find quick answers to common questions about our clinic, services, and appointments."
       />
       
       <FaqList />
-      
-      <CTABanner />
     </div>
   );
 }

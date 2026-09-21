@@ -1,9 +1,4 @@
-// PageHero.tsx
-
-import { buttonVariants } from "@/components/ui/button-variants";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 interface PageHeroProps {
   headline: string;
@@ -14,29 +9,37 @@ interface PageHeroProps {
 
 export function PageHero({ headline, subheadline, showContactCTA = false }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-slate-50 pt-32 pb-20 lg:pt-48 lg:pb-32 border-b border-slate-200">
-      <div className="container px-4 md:px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
-        <div className="max-w-2xl text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
+    <section className="bg-background border-b border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+        <div className="max-w-3xl">
+          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
             {headline}
           </h1>
           {subheadline && (
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
               {subheadline}
             </p>
           )}
           {showContactCTA && (
-            <Link href="/contact">
-              <Button size="lg" className={buttonVariants({ size: "lg", className: "text-lg px-8 font-bold" })}>
-                 Book Appointment <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/book-appointment"
+                className="inline-block bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition-colors text-center"
+              >
+                Book Appointment
+              </Link>
+              <a
+                href="https://wa.me/2348033067153"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border-2 border-[#25D366] text-[#25D366] px-6 py-3 font-semibold hover:bg-[#25D366] hover:text-white transition-colors text-center"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
           )}
         </div>
       </div>
-      
-      {/* Clean structural background */}
-      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:32px_32px] opacity-20" />
     </section>
   );
 }

@@ -1,39 +1,35 @@
-import { Award, Users, Trophy } from "lucide-react";
-
 export function ClinicStats() {
   return (
-    <section className="py-20 bg-primary/5 relative overflow-hidden">
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-border/50">
-          <div className="flex flex-col items-center py-6 md:py-0">
-            <div className="w-16 h-16 bg-background rounded-2xl flex items-center justify-center text-primary shadow-sm mb-4 transform -rotate-3">
-              <Award className="w-8 h-8" />
-            </div>
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-2">20+</h3>
-            <p className="text-lg font-medium text-muted-foreground uppercase tracking-widest">Years in Practice</p>
+    <section className="bg-primary text-primary-foreground py-20 border-y border-primary-foreground/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
+          
+          <div className="flex flex-col items-center pt-8 md:pt-0">
+            <h3 className="font-heading text-5xl md:text-6xl font-bold mb-3">20+</h3>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary-foreground/80">Years in Practice</p>
+            <p className="mt-4 text-primary-foreground/70 text-sm max-w-[200px] mx-auto">
+              Decades of combined clinical expertise serving Lagos.
+            </p>
           </div>
           
-          <div className="flex flex-col items-center py-6 md:py-0">
-            <div className="w-16 h-16 bg-background rounded-2xl flex items-center justify-center text-primary shadow-sm mb-4 rotate-3">
-              <Users className="w-8 h-8" />
-            </div>
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-2">15,000+</h3>
-            <p className="text-lg font-medium text-muted-foreground uppercase tracking-widest">Patients Served</p>
+          <div className="flex flex-col items-center pt-8 md:pt-0">
+            <h3 className="font-heading text-5xl md:text-6xl font-bold mb-3">15k+</h3>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary-foreground/80">Patients Seen</p>
+            <p className="mt-4 text-primary-foreground/70 text-sm max-w-[200px] mx-auto">
+              From routine checks to complex disease management.
+            </p>
           </div>
           
-          <div className="flex flex-col items-center py-6 md:py-0">
-            <div className="w-16 h-16 bg-background rounded-2xl flex items-center justify-center text-primary shadow-sm mb-4 -rotate-3">
-              <Trophy className="w-8 h-8" />
-            </div>
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-2">15+</h3>
-            <p className="text-lg font-medium text-muted-foreground uppercase tracking-widest">Local & National Awards</p>
+          <div className="flex flex-col items-center pt-8 md:pt-0">
+            <h3 className="font-heading text-5xl md:text-6xl font-bold mb-3">1</h3>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary-foreground/80">Focus</p>
+            <p className="mt-4 text-primary-foreground/70 text-sm max-w-[200px] mx-auto">
+              Protecting and enhancing your family&apos;s vision.
+            </p>
           </div>
+          
         </div>
       </div>
-      
-      {/* Decorative patterns */}
-      <div className="absolute top-0 right-[-10%] w-64 h-64 bg-primary/5 rounded-full blur-[80px]" />
-      <div className="absolute bottom-0 left-[-10%] w-64 h-64 bg-blue-500/5 rounded-full blur-[80px]" />
     </section>
   );
 }

@@ -1,51 +1,55 @@
-import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
 export function AboutStory() {
   return (
-    <section className="py-24 bg-background">
-      <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="bg-background py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
-          <div className="order-2 lg:order-1 relative h-[500px] md:h-[600px] w-full rounded-3xl overflow-hidden">
-            <Image 
-              src="/images/office.jpg" 
-              alt="Marieta Eye Clinic interior"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="order-1 lg:order-2 space-y-8">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Story</h2>
-              <div className="space-y-4 text-lg text-muted-foreground">
-                <p>
-                  Marieta Eye Clinic was established with a clear and focused mission: to provide the highest standard of personalized eye care in a professional and welcoming environment. Led by Dr.Ijeamaka Onyia, a consultant optometrist with years of clinical expertise, we have become a trusted name in vision health.
-                </p>
-                <p>
-                  Located at the heart of Abule Egba, Lagos, we combine advanced diagnostic technology with a patient-centered approach. We believe that professional integrity and clinical excellence are the foundations of good healthcare, and we strive to embody these values in every consultation.
-                </p>
-                <p>
-                  Today, Marieta Eye Clinic offers a comprehensive spectrum of services from routine eye examinations and pediatric screenings to specialized glaucoma management and a premium selection of optical frames and lenses.
-                </p>
-              </div>
+          <div className="space-y-8">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+              A local clinic with clinical excellence at its core.
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
+              <p>
+                Marieta Eye Clinic was established with a clear mission: to provide the highest standard of personalized eye care right here in Abule Egba. We didn&apos;t want our patients to have to choose between convenience and clinical quality.
+              </p>
+              <p>
+                When you walk through our doors, you are treated by professionals who combine advanced diagnostic technology with a genuinely patient-centered approach. We believe that professional integrity and clinical excellence are the foundations of good healthcare.
+              </p>
+              <p>
+                From routine eye examinations and pediatric screenings to specialized glaucoma management and dispensing premium optical frames, we handle every aspect of your vision health under one roof.
+              </p>
             </div>
-
-            <div className="grid sm:grid-cols-2 gap-6 pt-6 border-t border-border">
+            
+            <div className="pt-8 border-t border-border grid sm:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Our Mission</h3>
-                <p className="text-muted-foreground">To preserve, protect, and enhance your vision through expert, patient-centered clinical care and surgical excellence.</p>
+                <h3 className="font-heading text-xl font-bold text-foreground mb-3">Our Mission</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  To preserve, protect, and enhance your vision through expert, honest clinical care.
+                </p>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Our Values</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-primary mr-2 shrink-0 mt-0.5" /> Integrity & Honesty</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-primary mr-2 shrink-0 mt-0.5" /> Compassionate Care</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-primary mr-2 shrink-0 mt-0.5" /> Clinical Excellence</li>
+                <h3 className="font-heading text-xl font-bold text-foreground mb-3">Our Core Values</h3>
+                <ul className="space-y-2 text-muted-foreground text-sm">
+                  <li className="flex gap-2"><span className="text-primary font-bold">&mdash;</span> Integrity & Honesty</li>
+                  <li className="flex gap-2"><span className="text-primary font-bold">&mdash;</span> Compassionate Care</li>
+                  <li className="flex gap-2"><span className="text-primary font-bold">&mdash;</span> Clinical Rigour</li>
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div className="relative h-[400px] md:h-[600px] w-full">
+            <Image 
+              src="/images/office.jpg" 
+              alt="Inside Marieta Eye Clinic"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            {/* Grounding frame effect */}
+            <div className="absolute inset-0 border-[16px] border-background/20" />
           </div>
 
         </div>

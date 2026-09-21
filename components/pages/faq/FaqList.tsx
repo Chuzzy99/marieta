@@ -7,9 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
 
 const categories = ["All", "General", "Services", "Payment", "Appointments", "Emergency"];
 
@@ -18,80 +16,60 @@ const faqs = [
   {
     category: "General",
     question: "What are your hours of operation?",
-    answer: "We are open Monday through Thursday from 8:00 AM to 5:00 PM, and Friday from 8:00 AM to 1:00 PM. We offer Saturday appointments by special request only. We are closed on Sundays."
+    answer: "We are open Monday through Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 4:00 PM. We are closed on Sundays."
   },
   {
     category: "General",
     question: "Are you accepting new patients?",
-    answer: "Yes, we are currently accepting new patients for all our providers. You can schedule an appointment online or by calling our office."
+    answer: "Yes, we are always accepting new patients. You can walk in during our operating hours, or book ahead on WhatsApp to reduce your wait time."
   },
   {
     category: "General",
-    question: "Where are you located?",
-    answer: "Our clinic is located at 378 Abeokuta Exp Road, Abule Egba, Lagos, Nigeria. We are easily accessible and located in a secure environment."
+    question: "Where exactly are you located?",
+    answer: "Our clinic is located at 378 Abeokuta Express Road, Abule Egba, Lagos. We are right opposite the main bus stop."
   },
   
   // Services
   {
     category: "Services",
     question: "Do you treat Glaucoma?",
-    answer: "Yes, we specialize in advanced glaucoma assessment and management. Dr. Onyia and our clinical team use advanced diagnostic tools to monitor and treat glaucoma to preserve your vision."
+    answer: "Yes, we specialize in comprehensive glaucoma assessment and management. Dr. Onyia and our team use advanced diagnostic tools to monitor and treat glaucoma, helping preserve your vision."
   },
   {
     category: "Services",
     question: "Do you treat children?",
-    answer: "Yes, we offer specialized children's vision screening and pediatric eye care. It is important to catch vision issues early in a child's development."
+    answer: "Yes, we offer specialized pediatric eye care and vision screenings. We have a friendly environment to ensure children feel comfortable during their tests."
   },
   {
     category: "Services",
-    question: "Can I get my glasses and contacts at your clinic?",
-    answer: "Absolutely. We have a quality optical sales department with a wide selection of designer frames and premium lenses. We also provide professional contact lens fitting and aftercare."
+    question: "Can I get my glasses at your clinic?",
+    answer: "Absolutely. We have a dedicated optical section with a wide selection of durable and stylish frames, plus premium lenses suited to your prescription."
   },
   
   // Payment
   {
     category: "Payment",
     question: "What payment methods do you accept?",
-    answer: "We accept cash, bank transfers, and all major credit cards including Visa, Mastercard, and American Express. Payment is required at the time of service."
-  },
-  {
-    category: "Payment",
-    question: "Do you offer payment plans?",
-    answer: "We offer transparent pricing with flexible payment options. Please speak with our staff about payment arrangements for larger procedures."
+    answer: "We accept cash and direct bank transfers. We do not accept credit cards online at this time. A registration fee is required before your consultation begins."
   },
   
   // Appointments
   {
     category: "Appointments",
     question: "How long does a routine eye exam take?",
-    answer: "A standard comprehensive eye exam typically takes 45 to 60 minutes. If your eyes are dilated, the appointment may take up to 90 minutes."
-  },
-  {
-    category: "Appointments",
-    question: "Do I need to be dilated?",
-    answer: "Dilation is highly recommended for all new patients and annually for most returning patients. It allows our doctors to thoroughly examine the inside of your eye for signs of disease."
+    answer: "A standard comprehensive eye exam typically takes 45 to 60 minutes, depending on the specific tests you need."
   },
   {
     category: "Appointments",
     question: "What should I bring to my appointment?",
-    answer: "Please bring your photo ID, your current glasses or contact lens boxes, and a list of any medications you are taking."
+    answer: "Please bring any current glasses or contact lenses you use, and a list of any medications you are taking. Previous eye records are also helpful if you have them."
   },
   
   // Emergency
   {
     category: "Emergency",
-    question: "What constitutes an eye emergency?",
-    answer: "Sudden vision loss, severe eye pain, flashes of light, new or worsening floaters, chemical exposure, or a foreign object in the eye are all emergencies requiring immediate attention."
-  },
-  {
-    category: "Emergency",
-    question: "What should I do if I have an eye emergency after hours?",
-    answer: "If you experience a medical emergency after our regular business hours, please go to the nearest emergency room or urgent care center immediately."
-  },
-  {
-    category: "Emergency",
-    question: "Do you take walk-in emergencies?",
-    answer: "During normal business hours, we do our best to accommodate urgent eye problems the same day. However, we strongly recommend calling ahead so we can prepare for your arrival."
+    question: "What should I do if I have an eye emergency?",
+    answer: "Sudden vision loss, severe eye pain, chemical exposure, or a foreign object in the eye require immediate attention. If this happens during our working hours, come straight to the clinic or call us immediately on +234 803 306 7153."
   }
 ];
 
@@ -107,46 +85,49 @@ export function FaqList() {
   });
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container px-4 md:px-6 max-w-4xl mx-auto">
+    <section className="py-20 md:py-28 bg-background">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Search and Filters */}
-        <div className="mb-12 space-y-6">
-          <div className="relative max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
-            <Input 
+        <div className="mb-16 space-y-8">
+          <div className="relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
+            <input 
               type="text" 
               placeholder="Search for questions..." 
-              className="pl-10 h-12 rounded-full bg-muted/50 border-transparent focus-visible:bg-background"
+              className="w-full pl-12 pr-4 py-4 bg-muted border border-border text-foreground focus:outline-none focus:border-primary transition-colors text-lg"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
-              <Button
+              <button
                 key={category}
-                variant={activeCategory === category ? "default" : "outline"}
                 onClick={() => setActiveCategory(category)}
-                className="rounded-full px-6 text-sm"
+                className={`px-5 py-2 text-sm font-semibold transition-colors border-b-2 ${
+                  activeCategory === category 
+                    ? "border-primary text-primary" 
+                    : "border-transparent text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {category}
-              </Button>
+              </button>
             ))}
           </div>
         </div>
 
         {/* FAQ Accordion List */}
         {filteredFaqs.length > 0 ? (
-          <div className="border border-border rounded-2xl p-6 md:p-8 bg-muted/10 shadow-sm">
+          <div className="border-t border-border">
             <Accordion defaultValue={["item-0"]}>
               {filteredFaqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary transition-colors py-5">
+                <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
+                  <AccordionTrigger className="text-left font-heading text-xl md:text-2xl font-bold hover:text-primary transition-colors py-6 hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
+                  <AccordionContent className="text-muted-foreground text-lg leading-relaxed pb-8 pt-2">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -154,11 +135,14 @@ export function FaqList() {
             </Accordion>
           </div>
         ) : (
-          <div className="text-center py-20 bg-muted/20 rounded-2xl border border-dashed border-border">
+          <div className="text-center py-20 bg-muted border border-border">
             <p className="text-lg text-muted-foreground mb-4">No questions found matching your search.</p>
-            <Button variant="link" onClick={() => { setSearchQuery(""); setActiveCategory("All"); }}>
+            <button 
+              onClick={() => { setSearchQuery(""); setActiveCategory("All"); }}
+              className="text-primary font-semibold hover:underline"
+            >
               Clear Search
-            </Button>
+            </button>
           </div>
         )}
 

@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { blogPosts } from "@/lib/data/blog-posts";
 import { BlogGrid } from "@/components/blog/BlogGrid";
 import { PageHero } from "@/components/shared/PageHero";
-import NewsletterSection from "@/components/shared/NewsletterSection";
 
 export const metadata: Metadata = {
   title: "Eye Health Resources & Blog | Marieta Eye Clinic",
@@ -15,13 +14,13 @@ export default function BlogListingPage() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Marieta Eye Clinic Blog",
-    "description": "Expert eye care articles, vision health tips, and surgical information.",
+    "description": "Expert eye care articles, vision health tips, and clinical information.",
     "publisher": {
       "@type": "MedicalOrganization",
       "name": "Marieta Eye Clinic",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://Marietaeye.com/logo.png"
+        "url": "https://marietaeyeclinic.com/logo.png"
       }
     },
     "blogPost": blogPosts.map((post) => ({
@@ -33,29 +32,28 @@ export default function BlogListingPage() {
         "@type": "Person",
         "name": post.author
       },
-      "url": `https://Marietaeye.com/blog/${post.slug}`
+      "url": `https://marietaeyeclinic.com/blog/${post.slug}`
     }))
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
       <PageHero 
-        headline="Eye Health Resources & Blog"
-        subheadline="Your trusted source for vision care advice, patient success stories, and the latest in optometry."
+        headline="Eye Health Resources"
+        subheadline="Your trusted source for vision care advice and the latest clinical insights."
       />
 
-      <section className="py-24 bg-background">
-        <div className="container px-4 md:px-6">
+      <section className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlogGrid posts={blogPosts} />
         </div>
       </section>
 
-      <NewsletterSection />
     </div>
   );
 }

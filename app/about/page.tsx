@@ -3,7 +3,6 @@ import { PageHero } from "@/components/shared/PageHero";
 import { AboutStory } from "@/components/pages/about/AboutStory";
 import { TeamGrid } from "@/components/pages/about/TeamGrid";
 import { ClinicStats } from "@/components/pages/about/ClinicStats";
-import CTABanner from "@/components/shared/CTABanner";
 
 export const metadata: Metadata = {
   title: "About Us | Marieta Eye Clinic",
@@ -17,16 +16,15 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col bg-background">
       <PageHero 
-        headline="Our Vision for Your Eye Health" 
+        headline="Our vision for your eye health" 
         subheadline="Discover the story behind Marieta Eye Clinic and our unwavering commitment to protecting your sight at every stage of life."
-        showContactCTA={true}
+        showContactCTA={false}
       />
       <AboutStory />
       <ClinicStats />
       <TeamGrid />
-      <CTABanner />
     </div>
   );
 }

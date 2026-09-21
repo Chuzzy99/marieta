@@ -1,12 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, Phone } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button-variants";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SITE_CONFIG } from "@/lib/constants";
 
@@ -20,34 +18,39 @@ const navLinks = [
 ];
 
 export function Navbar() {
-  const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    setMounted(true);
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header 
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm",
-        scrolled ? "py-2" : "py-4",
-        mounted && !scrolled ? "lg:bg-transparent lg:shadow-none" : "lg:bg-white/80 lg:backdrop-blur-md"
-      )}
-    >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between bg-white rounded-lg shadow-md transition-all duration-300" role="navigation" aria-label="Main navigation">
+    <header className="bg-white border-b border-border sticky top-0 z-50">
+      <nav
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl text-primary hover:opacity-80 transition-opacity">
-          <Image src="/images/logo/photo_2026-03-16_13-11-27.jpg" alt="Marieta Eye Clinic Logo" width={48} height={48} className="object-contain" priority />
-          <span>{SITE_CONFIG.name}</span>
+        <Link
+          href="/"
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+        >
+          <Image
+            src="/images/logo/photo_2026-03-16_13-11-27.jpg"
+            alt="Marieta Eye Clinic Logo"
+            width={44}
+            height={44}
+            className="object-contain rounded"
+            priority
+          />
+          <div className="hidden sm:block">
+            <span className="font-heading text-lg font-bold text-foreground leading-tight block">
+              {SITE_CONFIG.name}
+            </span>
+            <span className="text-xs text-muted-foreground leading-tight block">
+              Abule Egba, Lagos
+            </span>
+          </div>
         </Link>
+
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-1" role="list">
           {navLinks.map((link) => (
@@ -55,10 +58,10 @@ export function Navbar() {
               <Link
                 href={link.href}
                 className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                  "px-3 py-2 text-sm font-medium transition-colors border-b-2",
                   pathname === link.href
-                    ? "text-primary bg-accent"
-                    : "text-foreground/70 hover:text-foreground hover:bg-accent"
+                    ? "text-primary border-primary"
+                    : "text-foreground/70 border-transparent hover:text-foreground hover:border-foreground/20"
                 )}
               >
                 {link.label}
@@ -67,85 +70,66 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTAs */}
-        <div className="hidden lg:flex items-center gap-2">
-          <a
-            href={`tel:${SITE_CONFIG.telephone.replace(/\s/g, '')}`}
-            className="text-sm text-foreground/70 hover:text-foreground transition-colors flex items-center gap-1"
-            aria-label="Call us"
+        {/* Desktop CTA */}
+        <div className="hidden lg:flex items-center gap-3">
+          <Link
+            href="/book-appointment"
+            className="bg-primary text-primary-foreground px-5 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors"
           >
-            <Phone className="w-4 h-4" aria-hidden="true" />
-            <span className="hidden xl:inline">{SITE_CONFIG.telephone}</span>
-          </a>
-          <Link 
-            href="/book-appointment" 
-            id="nav-book-btn"
-            className={buttonVariants({ size: "sm", className: "bg-primary hover:bg-primary/90 text-primary-foreground font-semibold" })}
-          >
-            Book Now
+            Book Appointment
           </Link>
         </div>
 
-        {/* Mobile Menu */}
-        <div className="flex lg:hidden items-center gap-2">
-          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-            <SheetTrigger aria-label="Open navigation menu" className="inline-flex items-center justify-center rounded-lg h-8 w-8 text-foreground/70 hover:text-foreground hover:bg-accent transition-colors">
-              <Menu className="h-5 w-5" aria-hidden="true" />
-            </SheetTrigger>
-            <SheetContent side="right" className="w-80 pt-12 bg-white !bg-white">
-              <div className="flex flex-col gap-4 bg-white">
-                <Link
-                  href="/"
-                  className="flex items-center gap-2 font-bold text-xl text-primary mb-4"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <Image 
-                    src="/images/logo/photo_2026-03-16_13-11-27.jpg" 
-                    alt="Marieta Eye Clinic Logo" 
-                    width={48}
-                    height={48}
-                    className="object-contain" />
-                  {SITE_CONFIG.name}
-                </Link>
-                <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setMobileOpen(false)}
-                      className={cn(
-                        "px-4 py-3 rounded-lg text-base font-semibold transition-colors",
-                        pathname === link.href
-                          ? "text-primary bg-accent"
-                          : "text-slate-900 hover:text-primary hover:bg-slate-50"
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </nav>
-                <div className="mt-4 flex flex-col gap-3 border-t border-border pt-4">
-                  <a
-                    href={`tel:${SITE_CONFIG.telephone.replace(/\s/g, '')}`}
-                    className="flex items-center gap-2 text-slate-900 font-semibold hover:text-primary px-4 py-2 mt-2"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    <Phone className="w-4 h-4 text-primary" />
-                    {SITE_CONFIG.telephone}
-                  </a>
-                  <Link 
-                    href="/book-appointment" 
-                    onClick={() => setMobileOpen(false)}
-                    className={buttonVariants({ className: "bg-primary hover:bg-primary/90 text-primary-foreground font-semibold" })}
-                  >
-                    Book Appointment
-                  </Link>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+        {/* Mobile toggle */}
+        <button
+          className="lg:hidden p-2 text-foreground/70 hover:text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="lg:hidden border-t border-border bg-white">
+          <div className="px-4 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={cn(
+                  "block px-4 py-3 text-base font-medium transition-colors",
+                  pathname === link.href
+                    ? "text-primary bg-primary/5"
+                    : "text-foreground/70 hover:text-foreground hover:bg-muted"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="pt-3 border-t border-border mt-3">
+              <Link
+                href="/book-appointment"
+                onClick={() => setMobileOpen(false)}
+                className="block bg-primary text-primary-foreground px-4 py-3 text-center font-semibold hover:bg-primary/90 transition-colors"
+              >
+                Book Appointment
+              </Link>
+              <a
+                href={SITE_CONFIG.socials.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="block text-center px-4 py-3 text-sm font-medium text-primary mt-2"
+              >
+                WhatsApp: +234 803 306 7153
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

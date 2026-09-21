@@ -1,67 +1,56 @@
-import { CheckCircle2, FileText, CreditCard, Glasses } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function PrepAndPayment() {
   return (
-    <section className="py-24 bg-muted/30 border-y border-border">
-      <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+    <section className="py-20 md:py-28 bg-[#faf9f6] border-t border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           
-          {/* What to Bring Checklist */}
           <div>
-            <h2 className="text-3xl font-bold text-foreground mb-6">What to Bring</h2>
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-6">What to Bring</h2>
             <p className="text-muted-foreground mb-8 text-lg">
-              To ensure a smooth check-in process and comprehensive evaluation, please bring the following items to your appointment:
+              To ensure a smooth check-in process, please bring the following items to your appointment:
             </p>
             
-            <ul className="space-y-4">
-              <li className="flex items-start bg-background p-4 rounded-xl border border-border shadow-sm">
-                <FileText className="w-6 h-6 text-primary mr-4 shrink-0 mt-0.5" />
+            <ul className="space-y-6">
+              <li className="flex items-start">
+                <span className="text-primary font-bold mr-4 mt-1">&mdash;</span>
                 <div>
-                  <h4 className="font-semibold text-foreground">Valid Photo ID</h4>
-                  <p className="text-sm text-muted-foreground">Driver&apos;s License, State ID, or Passport.</p>
+                  <h4 className="font-bold text-foreground text-lg">Current Eyewear</h4>
+                  <p className="text-muted-foreground">Your current prescription glasses, sunglasses, or contact lenses.</p>
                 </div>
               </li>
-              <li className="flex items-start bg-background p-4 rounded-xl border border-border shadow-sm">
-                <Glasses className="w-6 h-6 text-primary mr-4 shrink-0 mt-0.5" />
+              <li className="flex items-start">
+                <span className="text-primary font-bold mr-4 mt-1">&mdash;</span>
                 <div>
-                  <h4 className="font-semibold text-foreground">Current Eyewear</h4>
-                  <p className="text-sm text-muted-foreground">Your current prescription glasses, sunglasses, or contact lens boxes.</p>
-                </div>
-              </li>
-              <li className="flex items-start bg-background p-4 rounded-xl border border-border shadow-sm">
-                <CheckCircle2 className="w-6 h-6 text-primary mr-4 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-semibold text-foreground">List of Medications</h4>
-                  <p className="text-sm text-muted-foreground">Any prescription medications, vitamins, or supplements you are currently taking.</p>
+                  <h4 className="font-bold text-foreground text-lg">Medical History</h4>
+                  <p className="text-muted-foreground">Any past eye records and a list of medications you are currently taking.</p>
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Payment Info */}
           <div>
-            <div className="bg-primary/5 p-8 md:p-10 rounded-3xl border border-primary/10 h-full flex flex-col justify-center">
-              <div className="w-16 h-16 bg-background rounded-2xl flex items-center justify-center text-primary shadow-sm mb-6">
-                <CreditCard className="w-8 h-8" />
-              </div>
-              <h2 className="text-3xl font-bold text-foreground mb-4">Payment Options</h2>
-              <div className="space-y-4 text-muted-foreground text-lg mb-8">
+            <div className="bg-[#064e3b] text-white p-8 md:p-12 h-full flex flex-col justify-center">
+              <h2 className="font-heading text-3xl font-bold mb-6">Payment Options</h2>
+              <div className="space-y-4 text-white/80 text-lg mb-8 leading-relaxed">
                 <p>
-                  We believe that clear vision and eye health should be accessible. Marieta Eye Clinic offers transparent pricing and flexible payment options.
+                  Marieta Eye Clinic offers transparent pricing for all our services and treatments.
                 </p>
                 <p>
-                  We accept cash, bank transfers, and all major credit cards including Visa, Mastercard, and American Express.
+                  We accept cash and direct bank transfers. We do not accept card payments online at this time.
                 </p>
                 <p>
-                  Payment is required at the time of service. Our staff will provide you with a detailed cost breakdown before any procedures.
+                  Payment for consultation is required before screening. Our staff will provide you with a detailed cost breakdown before any additional procedures or dispensing.
                 </p>
               </div>
               <div>
-                <Button size="lg">
-                  <Link href="/book-appointment" className="flex items-center">Book Appointment</Link>
-                </Button>
+                <Link 
+                  href="/book-appointment" 
+                  className="inline-block bg-white text-[#064e3b] px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-white/90 transition-colors"
+                >
+                  Book Appointment
+                </Link>
               </div>
             </div>
           </div>
