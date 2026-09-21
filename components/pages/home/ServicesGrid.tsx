@@ -18,7 +18,7 @@ export default function ServicesGrid() {
               Our Comprehensive Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mt-4">
-              From routine exams to advanced surgical procedures, we provide expert care for every stage of your vision journey.
+              From routine exams to aftercare surgery procedures, we provide expert care for every stage of your vision journey.
             </p>
           </div>
         </div>

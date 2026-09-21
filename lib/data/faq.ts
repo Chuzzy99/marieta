@@ -31,7 +31,7 @@ export const faqItems: FAQItem[] = [
     id: "4",
     question: "How do I schedule an appointment?",
     answer:
-      "You can book an appointment through our website using the Book Appointment page, which offers both an online request form and Calendly scheduling. You can also call us at (555) 123-4567 or email hello@Marietaeye.com. We offer morning, afternoon, and evening slots on weekdays and morning slots on Saturdays.",
+      "You can book an appointment through our website using the Book Appointment page, which connects you directly to the doctor via WhatsApp. You can also call us at +234 803 306 7153 or email marietaeyeclinic@gmail.com. We offer morning, afternoon, and evening slots on weekdays and morning slots on Saturdays.",
     category: "Appointments",
   },
   {

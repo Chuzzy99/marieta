@@ -3,12 +3,12 @@ import { Calendar, UserCheck, CreditCard, Stethoscope, Sparkles, PhoneCall } fro
 const steps = [
   {
     title: "Schedule Your Appointment",
-    description: "Booking is simple and convenient. Use our online scheduling system to find an available time that works for you, or call our friendly reception team. We'll collect some basic information before your visit.",
+    description: "Booking is simple and convenient. Reach out to us directly via WhatsApp to find an available time that works for you, or call our friendly reception team. We'll collect some basic information before your visit.",
     icon: Calendar,
   },
   {
     title: "Arrive & Check In",
-    description: "When you arrive, our welcoming staff will guide you through a quick electronic registration process. If you haven't already filled out your new patient forms online, you can do so comfortably in our waiting area.",
+    description: "When you arrive, our welcoming staff will guide you through a quick registration process. We'll help you fill out any necessary patient forms comfortably in our waiting area.",
     icon: UserCheck,
   },
   {
