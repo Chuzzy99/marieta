@@ -1,21 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
 import { services } from "@/lib/data/services";
 
 const featured = [
   {
     slug: "comprehensive-eye-exams",
-    photo: "/images/office.jpg",
-    photoAlt: "Patient receiving a comprehensive eye examination",
+    photo: "/images/home/comprehensive_exam.jpg",
+    photoAlt: "Nigerian patient receiving a comprehensive eye examination",
   },
   {
     slug: "glaucoma-management",
-    photo: "/images/office.jpg",
-    photoAlt: "Glaucoma screening equipment at Marieta Eye Clinic",
+    photo: "/images/home/glaucoma_assessment.jpg",
+    photoAlt: "Nigerian doctor performing glaucoma screening",
   },
   {
     slug: "pediatric-eye-care",
-    photo: "/images/office.jpg",
-    photoAlt: "Child during a friendly paediatric eye screening",
+    photo: "/images/home/pediatric_exam.jpg",
+    photoAlt: "Nigerian child during a friendly paediatric eye screening",
   },
 ];
 
@@ -56,10 +57,12 @@ export default function ServicesShowcase() {
               {/* Photo side */}
               <div className="w-full md:w-1/2">
                 <div className="relative h-[280px] md:h-[340px] bg-muted">
-                  <img
+                  <Image
                     src={svc.photo}
                     alt={svc.photoAlt}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>

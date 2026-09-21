@@ -31,8 +31,8 @@ export default function HeroSection() {
           <div className="lg:col-span-7 relative">
             <div className="relative h-[350px] md:h-[480px] lg:h-[520px] lg:-mr-8 xl:-mr-16">
               <Image
-                src="/images/office.jpg"
-                alt="Inside Marieta Eye Clinic — consultation room with diagnostic equipment"
+                src="/images/home/hero_optometrist.jpg"
+                alt="Nigerian optometrist examining an adult patient with modern diagnostic equipment"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 58vw"
