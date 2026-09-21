@@ -41,7 +41,7 @@ export const services: Service[] = [
     icon: "Monitor",
     shortDescription: "High-precision computerized testing for comprehensive vision analysis.",
     description:
-      "Our computerized visual assessment uses state-of-the-art technology to provide a highly accurate analysis of your vision and detect subtle changes that standard tests might miss.",
+      "Our computerized visual assessment uses modern technology to provide a highly accurate analysis of your vision and detect subtle changes that standard tests might miss.",
     longDescription:
       "By utilizing digital diagnostic tools, we can perform a deeper analysis of your eye health and visual performance. This is particularly beneficial for early detection of refractive changes, assessing digital eye strain, and optimizing prescriptions for maximum visual comfort.",
     benefits: [
@@ -83,10 +83,10 @@ export const services: Service[] = [
     description:
       "Our clinic offers advanced screening, diagnosis, and comprehensive management for glaucoma and various other ocular diseases to safeguard your vision.",
     longDescription:
-      "Glaucoma is often a silent disease. We use state-of-the-art imaging and pressure testing to detect and manage glaucoma and other conditions like diabetic retinopathy and macular degeneration, helping to prevent irreversible vision loss.",
+      "Glaucoma is often a silent disease. We use advanced imaging and pressure testing to detect and manage glaucoma and other conditions like diabetic retinopathy and macular degeneration, helping to prevent irreversible vision loss.",
     benefits: [
       "Early detection of serious conditions",
-      "State-of-the-art diagnostic imaging",
+      "Advanced diagnostic imaging",
       "Personalized management plans",
       "Vision preservation focus",
     ],
@@ -101,7 +101,7 @@ export const services: Service[] = [
     icon: "Baby",
     shortDescription: "Friendly and thorough vision tests for children.",
     description:
-      "We provide specialized vision screenings tailored for children to ensure their eyes are developing correctly and to address any vision issues early in their development.",
+      "We provide specialized vision screenings designed for children to ensure their eyes are developing correctly and to address any vision issues early in their development.",
     longDescription:
       "Early vision screening is crucial for a child's learning and development. Our pediatric eye care focuses on detecting issues like amblyopia (lazy eye) and strabismus in a friendly, supportive environment.",
     benefits: [

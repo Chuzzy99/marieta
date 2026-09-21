@@ -269,7 +269,7 @@ export const testimonials: Testimonial[] = [
     initials: "AM",
     rating: 5,
     quote:
-      "The optical coherence tomography was advanced and painless. They detected issues other clinics missed. Truly cutting-edge technology!",
+      "The optical coherence tomography was advanced and painless. They detected issues other clinics missed. Great modern equipment!",
     service: "Advanced Imaging",
     serviceSlug: "advanced-imaging",
     date: "January 2026",

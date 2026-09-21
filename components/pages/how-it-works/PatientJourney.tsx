@@ -18,7 +18,7 @@ const steps = [
   },
   {
     title: "Comprehensive Eye Examination",
-    description: "Your thorough evaluation begins with preliminary testing by our specialized technicians, followed by a detailed examination with your doctor. We use state-of-the-art diagnostic technology to assess both your visual acuity and overall ocular health.",
+    description: "Your thorough evaluation begins with preliminary testing by our specialized technicians, followed by a detailed examination with your doctor. We use modern diagnostic technology to assess both your visual acuity and overall ocular health.",
     icon: Stethoscope,
   },
   {

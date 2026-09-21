@@ -21,7 +21,7 @@ export default function HeroSection() {
           Clear Vision for Life.
         </h2>
         <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Comprehensive eye care from trusted specialists. Experience clearer vision with our state-of-the-art treatments and compassionate approach.
+          Comprehensive eye care from trusted specialists. Experience clearer vision with our advanced treatments and compassionate approach.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 

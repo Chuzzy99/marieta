@@ -20,7 +20,7 @@ const steps = [
   },
   {
     title: "Personalized Plan",
-    description: "Receive a custom treatment or vision correction plan tailored to your unique lifestyle and goals.",
+    description: "Receive a custom treatment or vision correction plan designed for your unique lifestyle and goals.",
     icon: ClipboardCheck,
     color: "bg-emerald-500/10 text-emerald-600",
   },

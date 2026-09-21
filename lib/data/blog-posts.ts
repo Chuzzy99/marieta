@@ -75,7 +75,7 @@ The most effective way to provide your eyes with much-needed relief is the **20-
 At Marieta Eye Clinic, we offer specialized assessments for digital strain. We can provide:
 - **Blue-light filtering lenses**: To reduce glare and high-energy visible light.
 - **Ergonomic consultations**: Tips on screen positioning and lighting.
-- **Specialized prescriptions**: Tailored specifically for the distance between your eyes and your monitor.
+- **Specialized prescriptions**: Made specifically for the distance between your eyes and your monitor.
 
 Don't let digital strain dampen your productivity. Small changes and regular professional checkups can keep your vision sharp and comfortable.
     `,

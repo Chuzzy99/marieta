@@ -35,7 +35,7 @@ const faqs = [
   {
     category: "Services",
     question: "Do you treat Glaucoma?",
-    answer: "Yes, we specialize in advanced glaucoma assessment and management. Dr. Onyia and our clinical team use state-of-the-art diagnostic tools to monitor and treat glaucoma to preserve your vision."
+    answer: "Yes, we specialize in advanced glaucoma assessment and management. Dr. Onyia and our clinical team use advanced diagnostic tools to monitor and treat glaucoma to preserve your vision."
   },
   {
     category: "Services",
