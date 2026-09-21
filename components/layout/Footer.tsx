@@ -33,7 +33,7 @@ export function Footer() {
               {SITE_CONFIG.name}
             </Link>
             <p className="text-sm leading-relaxed max-w-sm">
-              Your neighbourhood eye clinic on the Abeokuta Expressway. We have been looking after the eyes of Lagos families, workers, and children since our doors first opened.
+              Marieta Eye Clinic — comprehensive eye care you can trust. We have been looking after the eyes of families, workers, and children since our doors first opened.
             </p>
 
             {/* Contact details prominent */}
@@ -119,14 +119,6 @@ export function Footer() {
               >
                 Book Appointment
               </Link>
-              <a
-                href={SITE_CONFIG.socials.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-[#25D366] text-white text-center px-4 py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity"
-              >
-                Chat on WhatsApp
-              </a>
             </div>
           </div>
         </div>

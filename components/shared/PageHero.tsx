@@ -28,14 +28,6 @@ export function PageHero({ headline, subheadline, showContactCTA = false }: Page
               >
                 Book Appointment
               </Link>
-              <a
-                href="https://wa.me/2348033067153"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block border-2 border-[#25D366] text-[#25D366] px-6 py-3 font-semibold hover:bg-[#25D366] hover:text-white transition-colors text-center"
-              >
-                Chat on WhatsApp
-              </a>
             </div>
           )}
         </div>

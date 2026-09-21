@@ -37,7 +37,7 @@ export function ContactInfo() {
               <strong className="text-foreground">Phone:</strong> <a href="tel:+2348033067153" className="hover:text-primary transition-colors">+234 803 306 7153</a>
             </p>
             <p>
-              <strong className="text-foreground">WhatsApp:</strong> <a href="https://wa.me/2348033067153" target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition-colors text-[#25D366] font-medium">Chat with us</a>
+              <strong className="text-foreground">WhatsApp:</strong> <a href="https://wa.me/2348033067153" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+234 803 306 7153</a>
             </p>
             <p>
               <strong className="text-foreground">Email:</strong> <a href="mailto:marietaeyeclinic@gmail.com" className="hover:text-primary transition-colors">marietaeyeclinic@gmail.com</a>

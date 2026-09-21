@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { Phone, Clock, Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function VisitUs() {
@@ -13,27 +13,18 @@ export default function VisitUs() {
                 Come and see us
               </h2>
               <p className="text-white/80 text-lg leading-relaxed max-w-lg">
-                We are on the Abeokuta Expressway, right at Abule Egba. Look for us opposite the bus stop — easy to find whether you are coming from Iyana-Ipaja or Sango.
+                We provide a comfortable and welcoming environment for all our patients. Our facility is easily accessible, ensuring your visit is as smooth as possible.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="flex gap-3">
-                <MapPin className="w-5 h-5 shrink-0 mt-1 text-white/70" />
-                <div>
-                  <p className="font-semibold">Address</p>
-                  <p className="text-white/80 text-sm">
-                    378 Abeokuta Express Road,<br />Abule Egba, Lagos
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-3">
                 <Clock className="w-5 h-5 shrink-0 mt-1 text-white/70" />
                 <div>
                   <p className="font-semibold">Opening Hours</p>
                   <p className="text-white/80 text-sm">
-                    Mon–Fri: 8 am – 6 pm<br />
-                    Sat: 9 am – 4 pm<br />
+                    Mon&ndash;Fri: 8 am &ndash; 6 pm<br />
+                    Sat: 9 am &ndash; 4 pm<br />
                     Sun: Closed
                   </p>
                 </div>
@@ -41,11 +32,9 @@ export default function VisitUs() {
               <div className="flex gap-3">
                 <Phone className="w-5 h-5 shrink-0 mt-1 text-white/70" />
                 <div>
-                  <p className="font-semibold">Phone / WhatsApp</p>
+                  <p className="font-semibold">Phone</p>
                   <a
-                    href="https://wa.me/2348033067153"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="tel:+2348033067153"
                     className="text-white/80 text-sm hover:text-white transition-colors"
                   >
                     +234 803 306 7153
@@ -82,9 +71,9 @@ export default function VisitUs() {
             </div>
           </div>
 
-          {/* Right — map placeholder */}
+          {/* Right — image placeholder */}
           <div className="relative h-[300px] md:h-[400px] bg-[#053d2f]">
-            <iframe
+             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.0!2d3.3!3d6.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzYnMDAuMCJOIDPCsDE4JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1!5m2!1sen!2sng"
               width="100%"
               height="100%"
@@ -95,14 +84,6 @@ export default function VisitUs() {
               title="Marieta Eye Clinic location on Google Maps"
               className="grayscale hover:grayscale-0 transition-all duration-500"
             />
-            {/* Fallback if iframe blocked */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="text-center text-white/40 text-sm">
-                <MapPin className="w-8 h-8 mx-auto mb-2" />
-                <p>378 Abeokuta Express Road</p>
-                <p>Abule Egba, Lagos</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

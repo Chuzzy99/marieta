@@ -45,9 +45,6 @@ export function Navbar() {
             <span className="font-heading text-lg font-bold text-foreground leading-tight block">
               {SITE_CONFIG.name}
             </span>
-            <span className="text-xs text-muted-foreground leading-tight block">
-              Abule Egba, Lagos
-            </span>
           </div>
         </Link>
 
@@ -117,15 +114,6 @@ export function Navbar() {
               >
                 Book Appointment
               </Link>
-              <a
-                href={SITE_CONFIG.socials.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileOpen(false)}
-                className="block text-center px-4 py-3 text-sm font-medium text-primary mt-2"
-              >
-                WhatsApp: +234 803 306 7153
-              </a>
             </div>
           </div>
         </div>

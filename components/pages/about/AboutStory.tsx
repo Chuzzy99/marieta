@@ -8,11 +8,11 @@ export function AboutStory() {
           
           <div className="space-y-8">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-              A local clinic with clinical excellence at its core.
+              An independent clinic with clinical excellence at its core.
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
               <p>
-                Marieta Eye Clinic was established with a clear mission: to provide the highest standard of personalized eye care right here in Abule Egba. We didn&apos;t want our patients to have to choose between convenience and clinical quality.
+                Marieta Eye Clinic was established with a clear mission: to provide the highest standard of personalized eye care. We never want our patients to have to choose between convenience and clinical quality.
               </p>
               <p>
                 When you walk through our doors, you are treated by professionals who combine advanced diagnostic technology with a genuinely patient-centered approach. We believe that professional integrity and clinical excellence are the foundations of good healthcare.

@@ -26,7 +26,7 @@ const faqs = [
   {
     category: "General",
     question: "Where exactly are you located?",
-    answer: "Our clinic is located at 378 Abeokuta Express Road, Abule Egba, Lagos. We are right opposite the main bus stop."
+    answer: "You can find our exact location and directions on the Contact page."
   },
   
   // Services

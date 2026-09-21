@@ -12,10 +12,9 @@ export default function VisitPreview() {
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                Walk into our clinic on the Abeokuta Expressway and our reception
-                team will welcome you. If it is your first visit, we will ask you
-                to fill a short registration form and pay the consultation fee
-                before your screening begins.
+                Walk into our clinic and our reception team will welcome you. 
+                If it is your first visit, we will ask you to fill a short 
+                registration form and pay the consultation fee before your screening begins.
               </p>
               <p>
                 One of our technicians will run preliminary tests — visual
@@ -47,7 +46,7 @@ export default function VisitPreview() {
               <div>
                 <dt className="font-semibold text-foreground">Do I need an appointment?</dt>
                 <dd className="text-muted-foreground mt-1">
-                  Walk-ins are welcome during opening hours. Booking ahead on WhatsApp helps us reduce your wait time.
+                  Walk-ins are welcome during opening hours. Booking ahead helps us reduce your wait time.
                 </dd>
               </div>
               <div>
@@ -59,7 +58,7 @@ export default function VisitPreview() {
               <div>
                 <dt className="font-semibold text-foreground">How long does an exam take?</dt>
                 <dd className="text-muted-foreground mt-1">
-                  A comprehensive exam usually takes 45\u201360 minutes, depending on the tests needed.
+                  A comprehensive exam usually takes 45&ndash;60 minutes, depending on the tests needed.
                 </dd>
               </div>
               <div>
@@ -69,16 +68,6 @@ export default function VisitPreview() {
                 </dd>
               </div>
             </dl>
-            <div className="pt-4 border-t border-border">
-              <a
-                href="https://wa.me/2348033067153"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#25D366] text-white px-6 py-3 font-semibold text-sm hover:opacity-90 transition-opacity"
-              >
-                Book via WhatsApp
-              </a>
-            </div>
           </div>
         </div>
       </div>

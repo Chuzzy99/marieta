@@ -9,10 +9,10 @@ export default function HeroSection() {
           {/* Text — left side */}
           <div className="lg:col-span-5 space-y-6">
             <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-foreground leading-tight">
-              Your family eye clinic in Abule Egba, Lagos.
+              Clear vision, careful care.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-              We look after the eyes of everyday Lagosians — from children who need their first pair of glasses to adults managing glaucoma. Walk in or book ahead.
+              We look after your family&apos;s eyes &mdash; from children needing their first pair of glasses to adults managing complex ocular health conditions. Walk in or book ahead.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Link
@@ -21,18 +21,9 @@ export default function HeroSection() {
               >
                 Book an Appointment
               </Link>
-              <a
-                href="https://wa.me/2348033067153"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block border-2 border-[#25D366] text-[#25D366] px-7 py-3 font-semibold text-base hover:bg-[#25D366] hover:text-white transition-colors text-center"
-              >
-                Chat on WhatsApp
-              </a>
             </div>
             <div className="pt-4 text-sm text-muted-foreground">
-              <p>378 Abeokuta Express Road, Abule Egba</p>
-              <p>Mon\u2013Fri 8 am\u20136 pm &bull; Sat 9 am\u20134 pm</p>
+              <p>Mon&ndash;Fri 8 am&ndash;6 pm &bull; Sat 9 am&ndash;4 pm</p>
             </div>
           </div>
 

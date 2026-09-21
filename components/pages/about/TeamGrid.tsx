@@ -44,7 +44,7 @@ export function TeamGrid() {
                 Her philosophy is simple: every patient deserves time, clear explanations, and rigorous clinical care. Whether you are bringing in your child for their first pair of glasses, or needing complex management for an ocular disease, Dr. Onyia and her team are here to guide you.
               </p>
               <blockquote className="pl-6 border-l-2 border-primary text-white font-heading text-xl md:text-2xl italic my-8">
-                &ldquo;We built this clinic on the Abeokuta Expressway so that our community wouldn&apos;t have to travel far for world-class, honest eye care.&rdquo;
+                &ldquo;We built this clinic to ensure our patients never have to compromise on receiving world-class, honest eye care.&rdquo;
               </blockquote>
             </div>
             
