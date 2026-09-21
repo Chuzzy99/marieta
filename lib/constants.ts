@@ -18,7 +18,7 @@ export const SITE_CONFIG = {
   ceo: {
     name: "Dr. Marieta Onyia",
     title: "Chief Medical Director & CEO",
-    image: "/images/ceo/ceo-photo.jpg",
+    image: "/images/team/ceo.jpg",
   },
   logo: {
     image: "/images/logo/photo_2026-03-16_13-11-27.jpg",
